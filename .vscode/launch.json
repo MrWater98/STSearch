@@ -36,5 +36,27 @@
                 }
             ],
         },
+        {
+            "name": "ivl debug-b01",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/ziyue/researchlib/iverilog/lib/ivl/ivl",
+            "args": ["/home/ziyue/researchlib/Micro_Eletronic/concolic-testing/test/b01/temp.mid",
+            "-C","/home/ziyue/researchlib/Micro_Eletronic/concolic-testing/test/b01/ivrlh1cfc950d",
+            "-C","/home/ziyue/researchlib/iverilog/lib/ivl/conquestMulti.conf","--"],
+            "stopAtEntry": false,
+            "cwd": "/home/ziyue/researchlib/Micro_Eletronic/concolic-testing/test/b01",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "gdb debug",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+
     ]
 }

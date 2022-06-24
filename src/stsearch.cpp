@@ -4,6 +4,7 @@
 using namespace std;
 
 
-extern "C" void target_design(ivl_design_t design) { 
+extern "C" int target_design(ivl_design_t design) { 
 	cout<<"Hello World"<<endl;
+	return 0;
 }
