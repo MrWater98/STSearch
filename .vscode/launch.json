@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "concolic-b01",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/ziyue/researchlib/iverilog/bin/iverilog",
+            "args":["/home/ziyue/researchlib/Micro_Eletronic/STSearch/tests/b01/src/b01.v","-v",
+                "-o /home/ziyue/researchlib/Micro_Eletronic/concolic-testing/test/b01/stsearch_dut.v",
+                "-t","stsearchMulti",
+                "-ptb=/home/ziyue/researchlib/Micro_Eletronic/concolic-testing/test/b01/stsearch_tb.v",
+                "-pclk=clock",
+                "-preset=reset",
+                "-preset_edge=1",
+                "-punroll=3",
+                "-prandom_sim=3"],
+            "stopAtEntry": true,
+            "cwd": "/home/ziyue/researchlib/Micro_Eletronic/STSearch/tests/b01",
+            "environment": [
+                {
+                    "name": "TGT",
+                    "value": "/home/ziyue/researchlib/iverilog/lib/ivl"
+                }
+            ],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "gdb debug",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+        },
+    ]
+}
